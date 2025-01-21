@@ -1,0 +1,279 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(135deg, #4b6cb7, #182848); /* More visually engaging gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: background 0.5s ease-in-out;
+  padding: 10px;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+/* Container */
+.container {
+  width: 60%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #1a1a1a;
+  border-radius: 15px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1s ease-in-out;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+/* Card Styling */
+.currency-converter-card {
+  width: 100%;
+  padding: 10px;
+  background: #292929;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+  flex-wrap: wrap;
+}
+
+/* Title */
+.currency-converter-card h2 {
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Input and Output Groups */
+.input-group,
+.output-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.currency-label {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #e4e4e4;
+  font-weight: 600;
+}
+
+.currency-selector {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Improved Dropdown Styling */
+.currency-dropdown-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid #444;
+  border-radius: 8px;
+  padding: 10px 12px;
+  background-color: #555;
+  transition: all 0.3s ease;
+  width: 100%; /* Full width on mobile */
+  max-width: 350px;
+  overflow: hidden;
+}
+
+.currency-dropdown-wrapper:hover,
+.currency-dropdown-wrapper:focus-within {
+  border-color: #ff6f61;
+  box-shadow: 0 0 8px rgba(255, 111, 97, 0.6);
+}
+
+.currency-flag {
+  width: 30px;
+  height: 20px;
+  border-radius: 5px;
+}
+
+.currency-dropdown {
+  flex: 1;
+  background: none;
+  color: #ffffff;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  padding: 6px;
+}
+
+.currency-dropdown:focus {
+  background-color: #444;
+}
+
+.currency-input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  color: #e4e4e4;
+  background-color: #3a3a3a;
+  border: 2px solid #444;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.currency-input:focus {
+  border-color: #ff6f61;
+  box-shadow: 0 0 5px rgba(255, 111, 97, 0.7);
+  background-color: #525252;
+}
+
+/* Button Styling */
+#swap-btn,
+.convert-button {
+  background: #ff6f61;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+#swap-btn {
+  border-radius: 50%;
+  font-size: 22px;
+  padding: 12px;
+  margin: 30px auto;
+}
+
+#swap-btn:hover,
+.convert-button:hover {
+  background: #ff4c3b;
+  transform: scale(1.05);
+}
+
+.convert-button {
+  width: 100%;
+  margin-top: 20px;
+}
+
+#swap-btn:focus,
+.convert-button:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(255, 111, 97, 0.7);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .container {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .currency-converter-card h2 {
+    font-size: 22px;
+  }
+
+  .currency-input,
+  .currency-dropdown {
+    font-size: 14px;
+  }
+
+  #swap-btn {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .convert-button {
+    font-size: 16px;
+    padding: 12px 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .currency-converter-card {
+    padding: 20px;
+  }
+
+  .currency-converter-card h2 {
+    font-size: 20px;
+  }
+
+  .currency-label {
+    font-size: 14px;
+  }
+
+  .currency-input,
+  .currency-dropdown {
+    font-size: 14px;
+  }
+
+  #swap-btn {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .convert-button {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .currency-converter-card {
+    padding: 15px;
+  }
+
+  .currency-converter-card h2 {
+    font-size: 18px;
+  }
+
+  .currency-label {
+    font-size: 12px;
+  }
+
+  .currency-input,
+  .currency-dropdown {
+    font-size: 12px;
+  }
+
+  #swap-btn {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .convert-button {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
